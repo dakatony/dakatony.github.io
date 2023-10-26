@@ -471,10 +471,9 @@ main { overflow-x: hidden; }
   padding-top: 115px;
   margin-bottom: var(--section-padding);
 }
-
+\*-max-width: 500px;--*\
 .hero-banner {
-  max-width: 500px;
-  width: 110%;
+  width: 130%;
   margin-bottom: 30px;
 }
 
