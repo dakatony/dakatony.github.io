@@ -27,7 +27,19 @@ window.addEventListener("scroll", function () {
 
 });
 
+/**
+ * toggle the navbar when click any navbar link
+ */
 
+const navbarLinks = document.querySelectorAll("[data-nav-link]");
+
+for (let i = 0; i < navbarLinks.length; i++) {
+  navbarLinks[i].addEventListener("click", function () {
+    elemToggleFunc(navToggleBtn);
+    elemToggleFunc(navbar);
+    elemToggleFunc(document.body);
+  });
+}
 
 /**
  * navbar toggle
