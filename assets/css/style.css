@@ -169,7 +169,9 @@ body {
 body.active { overflow: hidden; }
 
 
-
+section {
+  scroll-margin-top: 4rem;
+}
 
 
 /*-----------------------------------*\
@@ -254,6 +256,8 @@ body.active { overflow: hidden; }
   color: var(--color-primary);
   line-height: 1.8;
   margin-bottom: 30px;
+  text-align: justify;
+  padding: 6px;
 }
 
 .section-text {
@@ -1154,7 +1158,7 @@ textarea.input-field {
   }
 
   .hero img {
-    height: 124%;
+    height: 130%;
     width: auto;
     margin-inline: auto;
   }
