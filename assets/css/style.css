@@ -55,7 +55,7 @@
    * spacing
    */
 
-  --section-padding: 80px;
+  --section-padding: 20px;
 
   /**
    * radius
@@ -246,7 +246,7 @@ body.active { overflow: hidden; }
 }
 
 .section-title {
-  max-width: 350px;
+  /* max-width: 350px; */
   margin-bottom: 30px;
 }
 
@@ -463,15 +463,18 @@ body.active { overflow: hidden; }
 main { overflow-x: hidden; }
 
 .hero {
-  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  /* min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 115px;
+  padding-top: 115px; */
   margin-bottom: var(--section-padding);
 }
-\*-max-width: 500px;--*\
+
 .hero-banner {
   width: 130%;
   margin-bottom: 30px;
@@ -936,7 +939,7 @@ textarea.input-field {
     margin-inline: auto;
   }
 
-  .section-title { max-width: 380px; }
+  /* .section-title { max-width: 380px; } */
 
 
 
@@ -969,7 +972,7 @@ textarea.input-field {
 
   .container { max-width: 720px; }
 
-  .section-title { max-width: 430px; }
+  /* .section-title { max-width: 430px; } */
 
 
 
@@ -1035,7 +1038,7 @@ textarea.input-field {
      * spacing
      */
 
-    --section-padding: 100px;
+    --section-padding: 20px;
 
   }
 
@@ -1113,14 +1116,24 @@ textarea.input-field {
    * HERO
    */
 
-  .hero {
+  /* .hero {
     position: relative;
     padding-top: 0;
     height: 100vh;
+  } */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    padding-top: 0;
+    margin-top: 80px;
+    height: 50vh;
   }
 
   .hero-banner {
-    max-width: unset;
+    max-width: 400px;
     height: 80%;
     margin-bottom: 0;
   }
