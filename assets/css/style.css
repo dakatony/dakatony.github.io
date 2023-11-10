@@ -173,7 +173,19 @@ section {
   scroll-margin-top: 4rem;
 }
 
+details {
+  /* background-color: var(--bg-primary);*/ 
+  color: var(--color-primary);
+  
+}
 
+summary {
+  background-color: var(--raw-seinna);
+  color: white;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+}
 /*-----------------------------------*\
  * #REUSED STYLE
 \*-----------------------------------*/
