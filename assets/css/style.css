@@ -37,7 +37,7 @@
   --fs-1: 2rem;
   --fs-2: calc(1.213rem + 1vw);
   --fs-3: calc(1.313rem + 1vw);
-  --fs-4: 1.4rem;
+  --fs-4: 1.1rem;
   --fs-5: 1rem;
   --fs-6: 0.813rem;
   --fs-7: 0.75rem;
@@ -178,13 +178,43 @@ details {
   color: var(--color-primary);
 }
 
+details > table {
+  width: 100%;
+}
+
+details > table > tbody > tr > td {
+  column-span: 5;
+  margin-bottom: 5px;
+}
+details > table > tbody > tr > td span:nth-child(1) {
+  float:left
+}
+details > table > tbody > tr > td span:nth-child(2) {
+  float:right
+}
+
 summary {
   background-color: var(--raw-seinna);
   color: white;
   text-transform: uppercase;
   font-size: medium;
   font-weight: bold;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  padding: 3px;
 }
+
+/* summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  content: ' +';
+}
+details[open] summary:after {
+  content: " -";
+} */
+
 /*-----------------------------------*\
  * #REUSED STYLE
 \*-----------------------------------*/
@@ -267,6 +297,7 @@ summary {
   color: var(--color-primary);
   line-height: 1.8;
   margin-bottom: 30px;
+  font-size: var(--fs-4);
   text-align: justify;
   padding: 6px;
 }
@@ -275,6 +306,8 @@ summary {
   color: var(--color-secondary);
   line-height: 1.8;
   margin-bottom: 30px;
+  font-size: var(--fs-4);
+  text-align: justify;
 }
 
 .tooltip {
@@ -390,13 +423,14 @@ summary {
   transform: rotate(-55deg);
   transition: var(--transition-1);
   z-index: 2;
+  margin-right: 3px;
 }
 
 .nav-toggle-btn.active { transform: rotate(-45deg); }
 
 .nav-toggle-btn span {
   width: 20px;
-  height: 2px;
+  height: 3px;
   background: var(--color-primary);
   margin: 5px;
   transition: var(--transition-1);
@@ -558,7 +592,7 @@ main { overflow-x: hidden; }
 }
 
 .stats-card .card-icon img {
-  width: 70%;
+  width: 80%;
   filter: invert(1);
 }
 
@@ -566,6 +600,7 @@ main { overflow-x: hidden; }
   width: calc(100% - 95px);
   color: var(--raw-seinna);
   text-align: center;
+  text-transform: uppercase
 }
 
 .stats-card .card-title strong {
@@ -795,6 +830,7 @@ main { overflow-x: hidden; }
   font-style: normal;
   line-height: 1.6;
   transition: var(--transition-1);
+  font-size: var(--fs-4);
 }
 
 .contact-info:not(address):is(:hover, :focus) { color: var(--color-primary); }
