@@ -312,6 +312,13 @@ details[open] summary:after {
   text-align: justify;
 }
 
+.section-text-notes {
+  color: var(--color-secondary);
+  line-height: 2;
+  margin-bottom: 15px;
+  font-size: var(--fs-6);
+}
+
 .tooltip {
   position: absolute;
   top: -40px;
