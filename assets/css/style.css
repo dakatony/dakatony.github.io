@@ -84,6 +84,7 @@ body.dark_theme {
   --input-bg: hsl(0, 0%, 16%);
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
+  --promotion: hsl(51, 95%, 54%);
 
 }
 
@@ -97,6 +98,7 @@ body.light_theme {
   --input-bg: hsl(0, 0%, 93%);
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
+  --promotion: hsl(13, 96%, 47%);
 
 }
 
@@ -361,7 +363,7 @@ details[open] summary:after {
 
 .logo {
   position: relative;
-  min-width: 77px;
+  min-width: 171px;
   z-index: 2;
 }
 
@@ -948,9 +950,13 @@ textarea.input-field {
   line-height: 1.6;
 }
 
-.copyright a {
+.copyright a, .copyright button {
   display: inline-block;
   color: var(--raw-seinna);
+}
+
+#ctnLegal, #ctnPrivacy {
+  display: none;
 }
 
 /* parpadea element */
@@ -973,7 +979,7 @@ textarea.input-field {
   
 }
 .resplandor {
-  color: #f9d81a;
+  color: var(--promotion);
   font-weight: bold;
   text-shadow: 0 0 30px #fff;
 }
@@ -986,25 +992,29 @@ textarea.input-field {
 /* The Modal (background) */
 /*----------------------------------*/
 .modal {
-  display: none; /* Hidden by default */
+    /* display: none; Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 10; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+	animation: modal 2s 3s forwards;
+  visibility: hidden;
+	opacity: 0;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  position: relative;
+  background-color: #fff5f0;
+  border-radius: 10px;
+  margin: 1% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 97%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -1022,6 +1032,52 @@ textarea.input-field {
   cursor: pointer;
 }
 
+/* MODAL PROMO */
+#modalPromo {
+	display: flex;	
+	animation: modal 2s 2s forwards;
+  visibility: hidden;
+}
+
+/* MODAL */
+.promo-content {
+  margin-top: 25px;
+}
+
+#cerrar {
+	display: none;
+}
+
+#cerrar + label {
+	position: absolute;
+	color: #fff;
+	font-size: 25px;
+	z-index: 50;
+	background: darkred;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	
+	animation: modal 2s 2s forwards;
+	visibility: hidden;
+	opacity: 0;
+  padding-left: 10px;
+}
+
+/* #cerrar:checked + label, #cerrar:checked ~ #modalPromo {
+	display: none;
+}  */
+
+@keyframes modal {
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
 
 /*-----------------------------------*\
  * #GO TO TOP
@@ -1448,8 +1504,20 @@ textarea.input-field {
 
   .footer .logo { margin-bottom: 0; }
 
-}
+  /* MODAL */
+  .promo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+  }
 
+ /*  #cerrar + label {
+    top: 3%;
+    right: 2%;
+  } */
+
+}
 
 
 
