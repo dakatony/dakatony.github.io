@@ -25,6 +25,8 @@
   --scarlet: hsl(13, 96%, 47%);
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
+  --christmas: #DB0101; 
+  --blackfriday: #fff5f0;
 
   /**
    * typography
@@ -271,6 +273,11 @@ details[open] summary:after {
 }
 
 .btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(24, 74%, 64%); }
+
+.btn-christmas {
+  background-color: #2d6730;
+  color: #fff;
+}
 
 .section-subtitle {
   position: relative;
@@ -1016,7 +1023,7 @@ textarea.input-field {
 /* Modal Content/Box */
 .modal-content {
   position: relative;
-  background-color: #fff5f0;
+  background-color: var(--christmas);
   border-radius: 10px;
   margin: 1% auto; /* 15% from the top and centered */
   padding: 20px;
