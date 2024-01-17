@@ -1048,7 +1048,7 @@ textarea.input-field {
 
 /* MODAL PROMO */
 #modalPromo {
-	display: flex;	
+	display: none; /* display:flex: */	
 	animation: modal 2s 2s forwards;
   visibility: hidden;
 }
